@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
+using NewTaxCodeWizard.ViewModels;
+using System.Collections.Generic;
 
 namespace NewTaxCodeWizard
 {
@@ -9,18 +11,29 @@ namespace NewTaxCodeWizard
         public MainForm()
         {
             InitializeComponent();
-            wizardViewModel = new ViewModels.WizardViewModel(
-                new IWizardPageViewModel[]{
-                    new ViewModels.StartPageViewModel(),
-                    new ViewModels.OptionsPageViewModel(),
-                    new ViewModels.InstallPageViewModel(),
-                    new ViewModels.FinishPageViewModel()
-                },
+
+            var data =
+                Newtonsoft.Json.JsonConvert.DeserializeObject<TaxCodeData>(Properties.Resources.NewTaxCodes);
+
+            List<IWizardPageViewModel> viewModels = new List<IWizardPageViewModel>();
+            viewModels.Add(new StartPageViewModel());
+            foreach (var taxCode in data.TaxCodes)
+            {
+                viewModels.Add(new TaxCodePageViewModel(taxCode));
+            }
+            viewModels.Add(new InstallPageViewModel());
+            viewModels.Add(new FinishPageViewModel());
+
+            wizardViewModel = new WizardViewModel(viewModels.ToArray(),
                 windowsUIView1, this);
 
             windowsUIView1.AddDocument(new ucStartPage() { Text = "Start" });
-            windowsUIView1.AddDocument(new ucOptionsPage() { Text = "Options" });
+
+            for (int i = 0; i < data.TaxCodes.Length; i++)
+                windowsUIView1.AddDocument(new UcTaxCodePage() { Text = "Tax Code" });
+
             windowsUIView1.AddDocument(new ucInstallPage() { Text = "Install" });
+
             windowsUIView1.AddDocument(new ucFinishPage() { Text = "Finish" });
 
             foreach (Document document in windowsUIView1.Documents)

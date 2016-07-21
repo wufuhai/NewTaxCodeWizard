@@ -17,14 +17,25 @@ namespace NewTaxCodeWizard.Views
         {
             get { return wizardViewModel; }
         }
+
+        protected virtual void OnNavigatedFrom(INavigationArgs args)
+        {
+            
+        }
+
+        protected virtual void OnNavigatedTo(INavigationArgs args)
+        {
+            wizardViewModel = args.Parameter as IWizardViewModel;
+        }
         #region ISupportNavigation Members
         IWizardViewModel wizardViewModel;
         void ISupportNavigation.OnNavigatedTo(INavigationArgs args)
         {
-            wizardViewModel = args.Parameter as IWizardViewModel;
+            OnNavigatedTo(args);
         }
         void ISupportNavigation.OnNavigatedFrom(INavigationArgs args)
         {
+            OnNavigatedFrom(args);
         }
         #endregion
     }

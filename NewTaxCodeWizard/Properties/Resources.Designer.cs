@@ -63,20 +63,29 @@ namespace NewTaxCodeWizard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap header_logo_GST {
+        internal static System.Drawing.Bitmap logo_kastam {
             get {
-                object obj = ResourceManager.GetObject("header-logo-GST", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_kastam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to {
+        ///  &quot;Version&quot;: &quot;2016.0.1.8&quot;,
+        ///  &quot;TaxCodes&quot;: [
+        ///    {
+        ///      &quot;TaxCode&quot;: &quot;PR&quot;,
+        ///      &quot;OldTaxCode&quot;: &quot;&quot;,
+        ///      &quot;TaxDescription&quot;: &quot;Relief Purchase under GST legislations. (e.g: purchase of RON 95 petrol &amp; Diesel).&quot;,
+        ///      &quot;Description&quot;: &quot;This refers to purchase of goods which given relief from charging and payment of GST. Example for this tax code are purchase of RON95 petrol, diesel and other relief supply that been given relief from GST as prescribed under GST (Relief) Order 2014.&quot;
+        ///    }
+        ///  ]
+        ///}.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_kastam {
+        internal static string NewTaxCodes {
             get {
-                object obj = ResourceManager.GetObject("logo_kastam", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("NewTaxCodes", resourceCulture);
             }
         }
     }

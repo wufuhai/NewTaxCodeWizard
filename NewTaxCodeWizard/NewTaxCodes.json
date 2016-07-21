@@ -1,5 +1,11 @@
-﻿[
-  {
-
-  }
-]
+﻿{
+  "Version": "2016.0.1.8",
+  "TaxCodes": [
+    {
+      "TaxCode": "PR",
+      "OldTaxCode": "",
+      "TaxDescription": "Relief Purchase under GST legislations. (e.g: purchase of RON 95 petrol & Diesel).",
+      "Description": "This refers to purchase of goods which given relief from charging and payment of GST. Example for this tax code are purchase of RON95 petrol, diesel and other relief supply that been given relief from GST as prescribed under GST (Relief) Order 2014."
+    }
+  ]
+}

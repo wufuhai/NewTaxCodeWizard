@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucStartPage));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -89,11 +90,10 @@
             this.labelControl2.Location = new System.Drawing.Point(269, 66);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(30, 10, 10, 10);
-            this.labelControl2.Size = new System.Drawing.Size(840, 35);
+            this.labelControl2.Size = new System.Drawing.Size(840, 95);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 6;
-            this.labelControl2.Text = "Follow the Tax Code Update Wizard to sync your tax codes with customs latest upda" +
-    "te!";
+            this.labelControl2.Text = resources.GetString("labelControl2.Text");
             // 
             // panel1
             // 
@@ -178,9 +178,9 @@
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(257, 93);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(257, 153);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(844, 320);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(844, 260);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -189,7 +189,7 @@
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(257, 54);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(844, 39);
+            this.layoutControlItem3.Size = new System.Drawing.Size(844, 99);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 

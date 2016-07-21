@@ -33,16 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.Data.v15.1" />
     <Reference Include="DevExpress.Printing.v15.1.Core" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1" />
     <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.1" />
     <Reference Include="DevExpress.XtraBars.v15.1" />
     <Reference Include="DevExpress.Images.v15.1" />
     <Reference Include="DevExpress.XtraLayout.v15.1" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,9 +77,9 @@
     <Compile Include="TaxCodes.cs" />
     <Compile Include="ViewModels\FinishPageViewModel.cs" />
     <Compile Include="ViewModels\InstallPageViewModel.cs" />
-    <Compile Include="ViewModels\OptionsPageViewModel.cs" />
     <Compile Include="ViewModels\StartPageViewModel.cs" />
     <Compile Include="ViewModels\TaxCodePageViewModel.cs" />
+    <Compile Include="ViewModels\TaxCodeViewModel.cs" />
     <Compile Include="ViewModels\WizardViewModel.cs" />
     <Compile Include="Views\ucFinishPage.cs">
       <SubType>UserControl</SubType>
@@ -75,11 +87,11 @@
     <Compile Include="Views\ucFinishPage.Designer.cs">
       <DependentUpon>ucFinishPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ucOptionsPage.cs">
+    <Compile Include="Views\ucTaxCodePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucOptionsPage.Designer.cs">
-      <DependentUpon>ucOptionsPage.cs</DependentUpon>
+    <Compile Include="Views\ucTaxCodePage.Designer.cs">
+      <DependentUpon>ucTaxCodePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ucInstallPage.cs">
       <SubType>UserControl</SubType>
@@ -119,8 +131,8 @@
     <EmbeddedResource Include="Views\ucFinishPage.resx">
       <DependentUpon>ucFinishPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucOptionsPage.resx">
-      <DependentUpon>ucOptionsPage.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ucTaxCodePage.resx">
+      <DependentUpon>ucTaxCodePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucInstallPage.resx">
       <DependentUpon>ucInstallPage.cs</DependentUpon>
@@ -129,6 +141,7 @@
       <DependentUpon>ucStartPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="NewTaxCodes.json" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,9 +151,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\header-logo-GST.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_kastam.png" />

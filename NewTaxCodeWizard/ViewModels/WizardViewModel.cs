@@ -1,5 +1,5 @@
-﻿using System.Windows.Forms;
-using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+﻿using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+using System.Windows.Forms;
 
 namespace NewTaxCodeWizard.ViewModels
 {
@@ -56,8 +56,8 @@ namespace NewTaxCodeWizard.ViewModels
                 Flyout flyout = view.ContentContainers["closeFlyout"] as Flyout;
                 flyout.Action = new FlyoutAction()
                 {
-                    Caption = "Setup Wizard",
-                    Description = "Are you sure you want to exit the setup?"
+                    Caption = "Tax Codes Update Wizard",
+                    Description = "Are you sure you want to exit the wizard?\r\n\r\nYou can run this wizard again from:\r\nView>Navigation>GST>Download latest tax code online."
                 };
                 view.FlyoutHidden += view_FlyoutHidden;
                 view.ActivateContainer(flyout);

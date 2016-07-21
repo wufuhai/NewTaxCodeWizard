@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>Royal Malaysian Customs Department has updated the Guide of Accounting Software
+on 20-July-2016, Additional Tax Code are recommended by this guide. By running this
+wizard, system will check whether the tax code in your database are the same with the tax
+code that recommended by RMCD and system will add and replace the tax code in this
+database automatically.
+</value>
+  </data>
 </root>
