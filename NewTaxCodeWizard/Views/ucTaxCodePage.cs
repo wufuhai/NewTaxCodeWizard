@@ -2,6 +2,7 @@
 using DevExpress.XtraEditors;
 using NewTaxCodeWizard.ViewModels;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace NewTaxCodeWizard
 {
@@ -24,8 +25,8 @@ namespace NewTaxCodeWizard
 
             var taxCode = this.PageViewModel.TaxCode;
             lblTitle.Text = "Tax Code - " + taxCode.TaxCode;
-            txtTaxCode.Text = taxCode.TaxCode;
-            txtTaxDescription.Text = taxCode.TaxDescription;
+
+            txtTaxDescription.Text = taxCode.TaxDescription.ToString();
             txtDescription.Text = taxCode.Description;
 
             PageViewModel.CheckIfTaxCodeExists();
@@ -67,7 +68,7 @@ namespace NewTaxCodeWizard
             PageViewModel.AddOrUpdateTaxCode();
 
             if (requiredAction == TaxCodeStatus.NeedToCreate)
-                XtraMessageBox.Show(string.Format("New Tax Code '{0}' has been created successfully!", txtTaxCode.Text));
+                XtraMessageBox.Show(string.Format("New Tax Code '{0}' has been created successfully!", PageViewModel.TaxCode.TaxCode));
             else if (requiredAction == TaxCodeStatus.NeedToUpdate)
                 XtraMessageBox.Show(string.Format("Tax Code '{0}' has been changed to '{1}'!", PageViewModel.TaxCode.OldTaxCode, PageViewModel.TaxCode.TaxCode));
 
@@ -77,7 +78,12 @@ namespace NewTaxCodeWizard
 
         private void btnSkip_Click(object sender, System.EventArgs e)
         {
-            PageViewModel.SkipTaxCode();
+            if (XtraMessageBox.Show("Do you want to skip this tax code?", "Skip Tax Code", MessageBoxButtons.YesNo) ==
+                DialogResult.Yes)
+            {
+                PageViewModel.SkipTaxCode();
+                WizardViewModel.PageCompleted();
+            }
         }
     }
 }

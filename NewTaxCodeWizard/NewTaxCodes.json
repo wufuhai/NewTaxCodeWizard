@@ -3,9 +3,54 @@
   "TaxCodes": [
     {
       "TaxCode": "PR",
-      "OldTaxCode": "",
-      "TaxDescription": "Relief Purchase under GST legislations. (e.g: purchase of RON 95 petrol & Diesel).",
+      "TaxDescription": 27,
       "Description": "This refers to purchase of goods which given relief from charging and payment of GST. Example for this tax code are purchase of RON95 petrol, diesel and other relief supply that been given relief from GST as prescribed under GST (Relief) Order 2014."
+    },
+    {
+      "TaxCode": "TX-CG",
+      "OldTaxCode": "TX-CGA",
+      "TaxDescription": 28,
+      "Description": "This tax code refer to purchase with GST incurred for all capital goods acquired that is claimable regardless the value of the goods. For example, land and buildings, equipment, machinery, vehicles, or others capital goods which the company claims for input tax and capitalize the acquired capital goods as their assets. The GST registrant who claiming the capital goods has to declare the value of this claimed capital goods under field (6a &6b;), and field (16) of GST-03 return."
+    },
+    {
+      "TaxCode": "ZDA",
+      "IsOutputTax": true,
+      "TaxDescription": 27,
+      "Description": "This refers on the supply of goods from Malaysia to Designated Area (Pulau Langkawi, Labuan, & Pulau Tioman) that qualify for zero-rate if the movement is supported with Customs No. 2 Form which stated the supplier’s name and address as the consignor and the recipient’s name and address in DA as the consignee, with supporting documents such as invoice, packing list, etc. Thus, exportation of goods from Malaysia to Designated Area is subject to zero-rated supplies and the supplier has to declare the value of this export under field (10) of GST-03 return. For more information, please refer to GST (Zero-Rated Supply) Order 2014 and Guide on Designated Area."
+    },
+    {
+      "TaxCode": "TX-IES",
+      "OldTaxCode": "TX-E43",
+      "Description": "This refers for transactions involving the payment of input tax attributable to the incidental exempt financial supplies as input tax attributable to taxable supplies. This means that the registered person is entitled to claim any input tax that is attributable to the making of the following incidental exempt financial supplies. Example of usage for this tax code are such as purchased a security box for the accounts clerk to deposit daily earnings of the company in a bank, hiring of security firm to transfer/deposit money into financial institutions (bank), sells lots of shares through a remisier and GST charged on the commission, and incurred GST on the legal agreements and other expenses related to a financial loans. (Note: Replace TX-E43)"
+    },
+    {
+      "TaxCode": "IES",
+      "OldTaxCode": "ES43",
+      "Description": "This refers to exempt supplies made under incidental exempt supplies and applicable for wholly taxable supplier and partially exempt trader/mixed supplier. Incidental exempt supply is a supply of financial services made by a registered person who is not in the business of making the financial services. Incidental Exempt Supplies as prescribed in Reg. 40, GST Regulations 2014 that include interest income from deposits placed with a financial institution in Malaysia, interest received from loans provided to employees also include factoring receivables, and realized foreign exchange gains. The supplier may declare the value of this incidental exempt supply under field (12) of GST-03 return. (Note: Replace ES43)"
+    },
+    {
+      "TaxCode": "IM",
+      "Description": "This refers to all goods imported into Malaysia which are subject to GST. The GST amount is calculated on the value which includes cost, insurance and freight plus the customs duty payable (if any) that based on the import declaration form (Customs Form No. 1 (K1), and other reference documents). This tax code applicable for all GST registrant unless the imported goods are for storage in a licensed warehouse or Free Trade Zone, or imported by GST registrant which is approved person under special scheme such as Warehouse Scheme, or Approved Trader Scheme."
+    },
+    {
+      "TaxCode": "AJP",
+      "Description": "Any adjustment made to Input Tax such as bad debt relief, and other input tax adjustments such as longer period adjustment and partial exemption adjustments. The GST registrant who claiming the Bad Debt Relief (AR only) has to declare the value of this claimed Bad Debt under field (6b), and field (17) of GST-03 return. Please refer to APPENDIX 5 for more details on specification for partial exemption adjustments. (This tax code is NOT applicable for credit/debit note). (Note: For more information on input tax credit, disallowance input tax, out of scope purchase, please refer to Guide on Input Tax Credit. Please refer to GST legislations (GST Acts 2014, GST Regulations 2014, GST (Exempt Supply) Order 2014) and Specific Guide (Guide on Partial Exemption & Guide on Input Tax Credit) for details on apportionment and de minimis rule.)"
+    },
+    {
+      "TaxCode": "TX-RE",
+      "Description": "This is only applicable to GST registered trader that makes both taxable and exempt supplies (or commonly known as partially exempt trader/mixed supplier). This refers to GST incurred that is not directly attributable to the making of taxable or exempt supplies (or commonly known as residual input tax). However, a mixed supplier can claim the full amount of the residual input tax incurred if the amount of exempt supply fulfilled the de minimis rule. Otherwise, he is required to apportion the residual input tax incurred accordingly. The example is such as residual input tax on operation overhead for a development of mixed property (properties that including residential and commercial). Please refer to APPENDIX 5 for more details on specification for partial exemption."
+    },
+    {
+      "TaxCode": "ZRE",
+      "Description": "A GST registered supplier can zero-rated (i.e. charging GST at 0%) the supply of goods that qualify for zero-rate if the movement of goods is supported with Customs No.2 Form (K2) which stated the supplier’s name and address as the consignor and the recipient’s name and address in overseas recipient as the consignee. Besides that, the supply of services will fall within the description of zero-rated if the services is attach with supporting documents such as invoice for an international services. Examples includes sale of air-tickets, and international freight charges. The supplier has to declare the value of this export under field (11) of GST-03 return."
+    },
+    {
+      "TaxCode": "GS",
+      "Description": "In certain circumstances, a taxable supply may be disregarded for the purpose of GST. This refers to supplies which are disregarded under GST legislation. These supplies include supply of goods or services between members of a GST group, supply of goods within warehouses under the Warehousing Scheme, supply of goods by a principal who is a taxable person to an agent who is acting in his own name as an auctioneer or others disregard supplies under GST legislation. The value of disregarded supplies has to be declare under field (13) of GST-03 return."
+    },
+    {
+      "TaxCode": "AJS",
+      "Description": "This refer any adjustment made to output tax. These include longer period adjustment, bad debt recovered, outstanding invoices more than 6 months & other output tax adjustments such as partial exemption adjustments. The GST registrant who account the output tax on Bad Debt Recovered (AR only) has to declare the value of this Bad Debt under field (5b), and field (18) of GST-03 return. Please refer to APPENDIX 5 for more details on specification for partial exemption adjustments. (This tax code is NOT applicable for credit/debit note)"
     }
   ]
 }

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace NewTaxCodeWizard
 {
-    public partial class MainForm : XtraForm
+    public partial class TaxCodeUpdateWizard : XtraForm
     {
         IWizardViewModel wizardViewModel;
-        public MainForm()
+        public TaxCodeUpdateWizard()
         {
             InitializeComponent();
 
@@ -21,7 +21,6 @@ namespace NewTaxCodeWizard
             {
                 viewModels.Add(new TaxCodePageViewModel(taxCode));
             }
-            viewModels.Add(new InstallPageViewModel());
             viewModels.Add(new FinishPageViewModel());
 
             wizardViewModel = new WizardViewModel(viewModels.ToArray(),
@@ -32,7 +31,6 @@ namespace NewTaxCodeWizard
             for (int i = 0; i < data.TaxCodes.Length; i++)
                 windowsUIView1.AddDocument(new UcTaxCodePage() { Text = "Tax Code" });
 
-            windowsUIView1.AddDocument(new ucInstallPage() { Text = "Install" });
 
             windowsUIView1.AddDocument(new ucFinishPage() { Text = "Finish" });
 

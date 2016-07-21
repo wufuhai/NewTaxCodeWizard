@@ -38,6 +38,8 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -46,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -63,12 +66,14 @@
             // layoutControl1
             // 
             this.layoutControl1.AllowCustomization = false;
+            this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.finishButton);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Controls.Add(this.panel1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(799, 141, 250, 350);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(1121, 370);
             this.layoutControl1.TabIndex = 6;
@@ -106,9 +111,10 @@
             this.layoutControlItem2,
             this.emptySpaceItem2,
             this.layoutControlItem3,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem4});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1121, 370);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -129,9 +135,9 @@
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(257, 54);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(257, 138);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(844, 228);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(844, 144);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -167,6 +173,29 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(882, 406);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Location = new System.Drawing.Point(269, 66);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Padding = new System.Windows.Forms.Padding(30, 10, 10, 10);
+            this.labelControl2.Size = new System.Drawing.Size(840, 80);
+            this.labelControl2.StyleController = this.layoutControl1;
+            this.labelControl2.TabIndex = 11;
+            this.labelControl2.Text = "All the recommended tax code was updated according to the Guide of Accounting Sof" +
+    "tware on 20-July-2016,  provided by Royal Malaysian \r\nCustoms Department. \r\n\r\nTh" +
+    "ank you!\r\n";
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.labelControl2;
+            this.layoutControlItem4.Location = new System.Drawing.Point(257, 54);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(844, 84);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
             // ucFinishPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +211,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,5 +228,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraEditors.SimpleButton finishButton;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

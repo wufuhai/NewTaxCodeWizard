@@ -116,7 +116,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::NewTaxCodeWizard.Properties.Resources.logo_kastam;
             this.pictureBox1.Location = new System.Drawing.Point(74, 133);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(90, 97);

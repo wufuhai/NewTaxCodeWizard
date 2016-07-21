@@ -7,11 +7,10 @@
     }
     public class TaxCodeViewModel
     {
+        public  bool IsOutputTax { get; set; }
         public  string TaxCode { get; set; }
         public  string OldTaxCode { get; set; }
-
-        public  int TaxDescEnumValue { get; set; }
-        public string TaxDescription { get; set; }
+        public int TaxDescription { get; set; }
 
         public string Description { get; set; }
     }

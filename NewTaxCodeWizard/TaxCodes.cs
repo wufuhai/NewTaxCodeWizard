@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DevExpress.Xpo;
+﻿using DevExpress.Xpo;
 
 namespace NewTaxCodeWizard
 {
@@ -14,6 +9,7 @@ namespace NewTaxCodeWizard
             
         }
 
+        public  int TaxDescription { get; set; }
         public string TaxCode { get; set; }
 
         public string Description { get; set; }

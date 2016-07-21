@@ -20,7 +20,7 @@ namespace NewTaxCodeWizard
             Application.SetCompatibleTextRenderingDefault(false);
 
             XpoDefault.DataLayer = XpoDefault.GetDataLayer(InMemoryDataStore.GetConnectionStringInMemory(false), AutoCreateOption.DatabaseAndSchema);
-            Application.Run(new MainForm());
+            Application.Run(new TaxCodeUpdateWizard());
         }
     }
 }

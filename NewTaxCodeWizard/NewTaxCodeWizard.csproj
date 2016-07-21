@@ -66,11 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="TaxCodeUpdateWizard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="TaxCodeUpdateWizard.Designer.cs">
+      <DependentUpon>TaxCodeUpdateWizard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,12 +93,6 @@
     <Compile Include="Views\ucTaxCodePage.Designer.cs">
       <DependentUpon>ucTaxCodePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ucInstallPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\ucInstallPage.Designer.cs">
-      <DependentUpon>ucInstallPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\ucStartPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,8 +105,8 @@
     <Compile Include="Views\BaseWizardPage.Designer.cs">
       <DependentUpon>BaseWizardPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="TaxCodeUpdateWizard.resx">
+      <DependentUpon>TaxCodeUpdateWizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -133,9 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucTaxCodePage.resx">
       <DependentUpon>ucTaxCodePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucInstallPage.resx">
-      <DependentUpon>ucInstallPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucStartPage.resx">
       <DependentUpon>ucStartPage.cs</DependentUpon>
