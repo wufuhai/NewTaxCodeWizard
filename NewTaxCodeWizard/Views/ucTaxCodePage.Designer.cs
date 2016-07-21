@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.lblStatus = new DevExpress.XtraEditors.LabelControl();
             this.txtTaxCode = new DevExpress.XtraEditors.TextEdit();
             this.txtTaxDescription = new DevExpress.XtraEditors.TextEdit();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
@@ -44,10 +43,11 @@
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.lblStatus = new DevExpress.XtraLayout.SimpleLabelItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxCode.Properties)).BeginInit();
@@ -62,15 +62,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.AllowCustomization = false;
-            this.layoutControl1.Controls.Add(this.lblStatus);
             this.layoutControl1.Controls.Add(this.txtTaxCode);
             this.layoutControl1.Controls.Add(this.txtTaxDescription);
             this.layoutControl1.Controls.Add(this.txtDescription);
@@ -85,18 +85,9 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // lblStatus
-            // 
-            this.lblStatus.Location = new System.Drawing.Point(42, 202);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(776, 71);
-            this.lblStatus.StyleController = this.layoutControl1;
-            this.lblStatus.TabIndex = 7;
-            this.lblStatus.Text = "Congratulations, tax code is up to date!";
-            // 
             // txtTaxCode
             // 
-            this.txtTaxCode.Location = new System.Drawing.Point(42, 66);
+            this.txtTaxCode.Location = new System.Drawing.Point(42, 64);
             this.txtTaxCode.Name = "txtTaxCode";
             this.txtTaxCode.Properties.ReadOnly = true;
             this.txtTaxCode.Size = new System.Drawing.Size(196, 20);
@@ -105,7 +96,7 @@
             // 
             // txtTaxDescription
             // 
-            this.txtTaxDescription.Location = new System.Drawing.Point(42, 106);
+            this.txtTaxDescription.Location = new System.Drawing.Point(42, 104);
             this.txtTaxDescription.Name = "txtTaxDescription";
             this.txtTaxDescription.Properties.ReadOnly = true;
             this.txtTaxDescription.Size = new System.Drawing.Size(776, 20);
@@ -114,19 +105,21 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(42, 146);
+            this.txtDescription.Location = new System.Drawing.Point(42, 144);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.ReadOnly = true;
-            this.txtDescription.Size = new System.Drawing.Size(776, 52);
+            this.txtDescription.Size = new System.Drawing.Size(776, 54);
             this.txtDescription.StyleController = this.layoutControl1;
             this.txtDescription.TabIndex = 6;
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnUpdate.Location = new System.Drawing.Point(612, 277);
+            this.btnUpdate.Location = new System.Drawing.Point(42, 277);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(96, 36);
+            this.btnUpdate.Size = new System.Drawing.Size(116, 36);
             this.btnUpdate.StyleController = this.layoutControl1;
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update Tax Code";
@@ -134,6 +127,8 @@
             // 
             // btnSkip
             // 
+            this.btnSkip.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic);
+            this.btnSkip.Appearance.Options.UseFont = true;
             this.btnSkip.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSkip.Location = new System.Drawing.Point(722, 277);
             this.btnSkip.Name = "btnSkip";
@@ -157,9 +152,10 @@
             this.simpleSeparator1,
             this.layoutControlItem3,
             this.layoutControlItem6,
+            this.emptySpaceItem1,
+            this.lblStatus,
             this.emptySpaceItem3,
-            this.emptySpaceItem5,
-            this.layoutControlItem7});
+            this.simpleSeparator2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 40);
@@ -182,7 +178,7 @@
             // 
             this.layoutControlItem4.Control = this.txtTaxCode;
             this.layoutControlItem4.CustomizationFormText = "Address line 1:";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 46);
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(200, 0);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(116, 40);
             this.layoutControlItem4.Name = "layoutControlItem4";
@@ -196,7 +192,7 @@
             // 
             this.layoutControlItem5.Control = this.txtTaxDescription;
             this.layoutControlItem5.CustomizationFormText = "Address line 2:";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 88);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 86);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(116, 40);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(780, 40);
@@ -210,15 +206,15 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 34);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(780, 12);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(780, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtDescription;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 128);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 72);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 74);
             this.layoutControlItem1.Text = "Description:";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(352, 13);
@@ -226,7 +222,7 @@
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 46);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 44);
             this.simpleSeparator1.Name = "simpleSeparator1";
             this.simpleSeparator1.Size = new System.Drawing.Size(780, 2);
             // 
@@ -234,11 +230,11 @@
             // 
             this.layoutControlItem3.Control = this.btnUpdate;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem3.Location = new System.Drawing.Point(570, 275);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(100, 40);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(100, 40);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 275);
+            this.layoutControlItem3.MaxSize = new System.Drawing.Size(120, 40);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(120, 40);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(100, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(120, 40);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "layoutControlItem2";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Left;
@@ -260,39 +256,37 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(120, 275);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(560, 40);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AllowHotTrack = false;
+            this.lblStatus.Location = new System.Drawing.Point(0, 256);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(780, 17);
+            this.lblStatus.Text = " ";
+            this.lblStatus.TextSize = new System.Drawing.Size(352, 13);
+            // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(670, 275);
-            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(10, 27);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 27);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 200);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(10, 40);
-            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem3.Text = "emptySpaceItem1";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(780, 56);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem5
+            // simpleSeparator2
             // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 275);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(570, 40);
-            this.emptySpaceItem5.Text = "emptySpaceItem1";
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.lblStatus;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 200);
-            this.layoutControlItem7.MinSize = new System.Drawing.Size(196, 17);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(780, 75);
-            this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
+            this.simpleSeparator2.AllowHotTrack = false;
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 273);
+            this.simpleSeparator2.Name = "simpleSeparator2";
+            this.simpleSeparator2.Size = new System.Drawing.Size(780, 2);
             // 
             // UcTaxCodePage
             // 
@@ -315,9 +309,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,13 +331,13 @@
         private DevExpress.XtraEditors.MemoEdit txtDescription;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
-        private DevExpress.XtraEditors.LabelControl lblStatus;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnSkip;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem lblStatus;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
     }
 }

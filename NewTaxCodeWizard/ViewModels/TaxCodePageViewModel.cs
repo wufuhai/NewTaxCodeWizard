@@ -82,7 +82,7 @@ namespace NewTaxCodeWizard.ViewModels
 
                 status = TaxCodeStatus.NeedToCreate;
 
-                AllowUpdate = false;
+                AllowUpdate = true;
                 AllowSkip = true;
             }
         }

@@ -38,13 +38,13 @@ namespace NewTaxCodeWizard
             if (PageViewModel.Status == TaxCodeStatus.UpToDate)
             {
                 lblStatus.Text = @"Congratulations, tax code is up to date!";
-                lblStatus.ForeColor = Color.LightGreen;
+                lblStatus.AppearanceItemCaption.ForeColor = Color.LightSeaGreen;
             }
             else if (PageViewModel.Status == TaxCodeStatus.NeedToCreate)
             {
                 btnUpdate.Text = "&Add Tax Code";
                 lblStatus.Text = @"Tax code does not exist. Click “Add Code” to insert this tax code.";
-                lblStatus.ForeColor = Color.Red;
+                lblStatus.AppearanceItemCaption.ForeColor = Color.Red;
             }
             else if (PageViewModel.Status == TaxCodeStatus.NeedToUpdate)
             {
@@ -54,25 +54,23 @@ namespace NewTaxCodeWizard
                         @"A similar tax code “{0}” was created in your previous version to handle the same scenario. Since the new tax code “{1}” is now recommended by Royal Malaysian Customs Department, it is recommended to update this code from “{0}” to “{1}”. Click “Change Code” to update this tax code.",
                         PageViewModel.TaxCode.OldTaxCode, PageViewModel.TaxCode.TaxCode);
 
-                lblStatus.ForeColor = Color.Orange;
+                lblStatus.AppearanceItemCaption.ForeColor = Color.Orange;
             }
 
             btnUpdate.Enabled = PageViewModel.AllowUpdate;
             btnSkip.Enabled = PageViewModel.AllowSkip;
         }
 
-        private void btnAdd_Click(object sender, System.EventArgs e)
-        {
-            PageViewModel.AddOrUpdateTaxCode();
-
-            XtraMessageBox.Show(string.Format("New Tax Code '{0}' has been created successfully!", txtTaxCode.Text));
-            UpdateStatus();
-            WizardViewModel.PageCompleted();
-        }
-
         private void btnUpdate_Click(object sender, System.EventArgs e)
         {
+            var requiredAction = PageViewModel.Status;
             PageViewModel.AddOrUpdateTaxCode();
+
+            if (requiredAction == TaxCodeStatus.NeedToCreate)
+                XtraMessageBox.Show(string.Format("New Tax Code '{0}' has been created successfully!", txtTaxCode.Text));
+            else if (requiredAction == TaxCodeStatus.NeedToUpdate)
+                XtraMessageBox.Show(string.Format("Tax Code '{0}' has been changed to '{1}'!", PageViewModel.TaxCode.OldTaxCode, PageViewModel.TaxCode.TaxCode));
+
             UpdateStatus();
             WizardViewModel.PageCompleted();
         }
